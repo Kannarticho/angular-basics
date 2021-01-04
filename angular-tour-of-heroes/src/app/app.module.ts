@@ -1,19 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { HeroesComponentModule } from './heroes/heroes.component.module';
-import { CommonModule } from '@angular/common';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    CommonModule,
-    HeroesComponentModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
